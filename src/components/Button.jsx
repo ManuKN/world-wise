@@ -5,7 +5,7 @@ function Button({children ,type , onClick}) {
     Button.propTypes = {
         children:  PropTypes.string.isRequired,
         type:PropTypes.string.isRequired,
-        onClick: PropTypes.func.isRequired
+        onClick: PropTypes.func
         // backfunction:PropTypes.func.isRequired
     }
   return (

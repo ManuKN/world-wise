@@ -8,5 +8,4 @@ function useURLPosition() {
     const Lat = searchParams.get("lat")
     return([Lat , Lng])
 }
-
 export default useURLPosition
