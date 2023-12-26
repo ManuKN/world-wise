@@ -37,7 +37,7 @@ useEffect(function(){
   if(isLoading) return <Spinner />
   const { cityName, emoji, date, notes } = currentCity;
  
-  
+  console.log(cityName)
   return (
     <div className={styles.city}>
       <div className={styles.row}>

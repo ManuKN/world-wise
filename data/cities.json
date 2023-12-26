@@ -37,16 +37,52 @@
       "id": 98443197
     },
     {
-      "cityName": "Udupi",
+      "cityName": "Bengaluru",
       "country": "India",
       "emoji": "🇮🇳",
-      "date": "2023-12-26T12:58:41.956Z",
-      "notes": "Heaven",
+      "date": "2023-12-26T18:59:25.726Z",
+      "notes": "Its Heaven😊",
       "position": {
-        "Lat": "13.29341114953598",
-        "Lng": "74.80590820312501"
+        "lat": "12.969765512005967",
+        "lng": "77.58819580078126"
       },
       "id": 98443198
+    },
+    {
+      "cityName": "Kerala",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-12-26T19:01:12.285Z",
+      "notes": "Gods Own Country",
+      "position": {
+        "lat": "9.966145483151626",
+        "lng": "76.24374389648439"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Yelahanka",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-12-26T19:15:04.163Z",
+      "notes": "Namooru😚",
+      "position": {
+        "lat": "13.114589451238322",
+        "lng": "77.52742767333986"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Mysore",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-12-26T19:21:23.624Z",
+      "notes": "City of King",
+      "position": {
+        "lat": "12.275598890561733",
+        "lng": "76.66259765625"
+      },
+      "id": 98443201
     }
   ]
 }

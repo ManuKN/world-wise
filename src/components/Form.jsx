@@ -9,6 +9,7 @@ import Spinner from "./Spinner";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useCitiesPath } from "../Contexts/CitiesProvider";
+import {useNavigate } from "react-router-dom";
 
   /* eslint-disable */
 export function convertToEmoji(countryCode) {
@@ -24,20 +25,21 @@ function Form() {
   const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
-  const[Lat , Lng] = useURLPosition();
+  const[lat , lng] = useURLPosition();
   const[isLoadingGeocoading , setIsloadingGeocoading] = useState(false)
   const[emoji , setEmoji] = useState();
   const[geocodingError , setGeocodingError] = useState("")
-  const{createCity} = useCitiesPath()
+  const{createCity , isLoading} = useCitiesPath()
+  const naviagte = useNavigate()
 
 const  BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client'
   useEffect(function(){
    async function fetchCityData(){
     try{
-    if(!Lat && !Lng) return;
+    if(!lat && !lng) return;
       setIsloadingGeocoading(true)
       setGeocodingError('')
-      const res = await fetch(`${BASE_URL}?latitude=${Lat}&longitude=${Lng}`)
+      const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`)
       const data = await res.json()
       console.log(data)
       setCityName(data.city || data.locality || "")
@@ -54,25 +56,25 @@ const  BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client'
    
    }
    fetchCityData()
-  },[Lat , Lng])
+  },[lat , lng])
 
   if(geocodingError) return <Message message={geocodingError}/>
- if(!Lat && !Lat) return <Message message='Please Select the Loaction on the Map To Write Ur Memories😀📝 '/>
+ if(!lat && !lat) return <Message message='Please Select the Loaction on the Map To Write Ur Memories😀📝 '/>
 if(isLoadingGeocoading) return <Spinner />
 
-function handleSubmit(e){
+async function handleSubmit(e){
    e.preventDefault()
   if(!cityName && !date) return;
   const newCity = {
-    cityName , country , emoji , date , notes , position : {Lat , Lng} 
+    cityName , country , emoji , date , notes , position : {lat , lng} 
   }
-  console.log(newCity)
-  createCity(newCity)
+   await createCity(newCity)
+   naviagte('/app/cities')
 }
 
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={`${styles.form} ${isLoading ? styles.loading : ''}`} onSubmit={handleSubmit}>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input

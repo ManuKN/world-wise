@@ -10,7 +10,7 @@ function CitiesProvider({children}) {
     CitiesProvider.propTypes = {
         children: PropTypes.node.isRequired,
       };
-      /* eslint-disable */
+      
     const[cities , setCities] = useState([])
    
 const[isLoading , setIsLoading] = useState(false);
@@ -62,6 +62,7 @@ useEffect(function(){
           }
         })
       const data = await res.json();
+      console.log(data)
       setCities([...cities , data]);
       }
       catch{
