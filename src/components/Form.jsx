@@ -10,6 +10,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useCitiesPath } from "../Contexts/CitiesProvider";
 
+  /* eslint-disable */
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
     .toUpperCase()

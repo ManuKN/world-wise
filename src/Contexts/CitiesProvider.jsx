@@ -72,7 +72,7 @@ useEffect(function(){
       }
   }
   return (
-   <CitiesContext.Provider value={{cities , isLoading ,currentCity , getCity , createCity}}>
+   <CitiesContext.Provider value={{cities , isLoading ,currentCity , getCity ,createCity }}>
     {children}
    </CitiesContext.Provider>
   )
