@@ -18,7 +18,13 @@ function CityItem({city}) {
   }
 
   const {cityName , emoji , date ,id ,position} = city
-  const {currentCity} = useCitiesPath();
+  const {currentCity,deleteCity} = useCitiesPath();
+
+  function handledelete(e){
+    e.preventDefault()
+    deleteCity(id)
+    
+  }
 
   return (
     <li>
@@ -26,7 +32,7 @@ function CityItem({city}) {
       <span className={styles.emoji}>{flagemojiToPNG(emoji)}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{formatDate(date)}</time>
-        <button className={styles.deleteBtn}>&times;</button>
+        <button className={styles.deleteBtn} onClick={handledelete}>&times;</button>
       </Link>
     </li>
   )

@@ -66,14 +66,32 @@ useEffect(function(){
       setCities([...cities , data]);
       }
       catch{
-        alert('There was a Problem with fetching Data...☹️')
+        alert('There was a Problem with Creating City...☹️')
       }
       finally{
         setIsLoading(false)
       }
   }
+
+  async function deleteCity(id){
+    try{
+      setIsLoading(true)
+      await fetch(`${BASE_URL}/cities/${id}`, {
+        method: 'DELETE'
+      })
+    setCities((cities)=>cities.filter((city) => city.id !== id ));
+    }
+    catch{
+      alert('There was a Problem with Deleting City...☹️')
+    }
+    finally{
+      setIsLoading(false)
+    }
+}
+
+
   return (
-   <CitiesContext.Provider value={{cities , isLoading ,currentCity , getCity ,createCity }}>
+   <CitiesContext.Provider value={{cities, isLoading ,currentCity , getCity ,createCity , deleteCity}}>
     {children}
    </CitiesContext.Provider>
   )

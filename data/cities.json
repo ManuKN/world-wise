@@ -25,30 +25,6 @@
       "id": 17806751
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Bengaluru",
-      "country": "India",
-      "emoji": "🇮🇳",
-      "date": "2023-12-26T18:59:25.726Z",
-      "notes": "Its Heaven😊",
-      "position": {
-        "lat": "12.969765512005967",
-        "lng": "77.58819580078126"
-      },
-      "id": 98443198
-    },
-    {
       "cityName": "Kerala",
       "country": "India",
       "emoji": "🇮🇳",
