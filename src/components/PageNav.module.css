@@ -17,7 +17,8 @@
 }
 
 .nav a:link,
-.nav a:visited {
+.nav a:visited,
+.nav a:hover {
   text-decoration: none;
   color: var(--color-light--2);
   text-transform: uppercase;
@@ -36,4 +37,12 @@ a.ctaLink:visited {
   color: var(--color-dark--0);
   padding: 0.8rem 2rem;
   border-radius: 7px;
+}
+
+a.ctaLink:hover{
+  color: rgb(24, 228, 184);
+}
+
+a.CtaLink:hover{
+  color: rgb(19, 228, 165);
 }

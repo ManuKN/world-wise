@@ -7,10 +7,10 @@ function PageNav() {
     <Logo />
     <ul>
        <li>
-        <NavLink to='/Pricing'>Pricing</NavLink>
+        <NavLink to='/Pricing'className={styles.CtaLink}>Pricing</NavLink>
        </li>
        <li>
-        <NavLink to='/Product'>Product</NavLink>
+        <NavLink to='/Product' className={styles.CtaLink}>Product</NavLink>
        </li>
        <li>
         <NavLink to='/Login' className={styles.ctaLink}>Login</NavLink>

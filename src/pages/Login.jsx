@@ -26,7 +26,7 @@ useEffect(function(){
   },[isAuthenticated,navigate])
 
 // if(!isAuthenticated && setError(true))
-// if(error) return <Message message='Your Credentails are Wrong🥺...Try again😉'/>
+// if(error) return alert("Your Login Credentail is not Correct🥺...Please try again😉")
   return (
     <main className={styles.login}>
       <PageNav />

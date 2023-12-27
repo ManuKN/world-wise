@@ -11,6 +11,9 @@
   padding: 2.5rem 9rem;
 }
 
+a.ctaLink:hover{
+  color: greenyellow;
+}
 .homepage section {
   display: flex;
   flex-direction: column;
@@ -32,3 +35,4 @@
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
 }
+
