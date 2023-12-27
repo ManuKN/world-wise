@@ -10,19 +10,21 @@ import CountryList from "./components/CountryList"
 import City from "./components/City"
 import Form from "./components/Form"
 import {CitiesProvider} from "./Contexts/CitiesProvider"
+import { AuthProvider } from "./Contexts/FakeAuthContext"
 
 
 function App() {
 
   return (
     <CitiesProvider>
+      <AuthProvider>
    <BrowserRouter>
    <Routes>
     <Route index element={<Homepage />}/>
     <Route path="Product" element={<Product />}/>
     <Route path="Pricing" element={<Pricing />}/>
     <Route path="Login" element={<Login />}/>
-    <Route path="App" element={<AppLayout />}>
+    <Route path="App" element={<AppLayout /> }>
       <Route index element={<Navigate replace to='cities' />}/>
       <Route path="cities" element={<CityList />}/>
       <Route path="cities/:id" element={<City />}/>
@@ -32,8 +34,8 @@ function App() {
     <Route path="*" element={<PageNotFound />}/>
    </Routes>
    </BrowserRouter>
-   </CitiesProvider>
-  )
+   </AuthProvider>
+   </CitiesProvider>)
 }
 
 export default App

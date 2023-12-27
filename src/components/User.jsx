@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import styles from "./User.module.css";
 
 const FAKE_USER = {
@@ -9,8 +10,11 @@ const FAKE_USER = {
 
 function User() {
   const user = FAKE_USER;
-
-  function handleClick() {}
+  const navigate = useNavigate()
+  function handleClick(e) {
+    e.preventDefault();
+    navigate('/')
+  }
 
   return (
     <div className={styles.user}>

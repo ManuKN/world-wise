@@ -25,18 +25,6 @@
       "id": 17806751
     },
     {
-      "cityName": "Kerala",
-      "country": "India",
-      "emoji": "🇮🇳",
-      "date": "2023-12-26T19:01:12.285Z",
-      "notes": "Gods Own Country",
-      "position": {
-        "lat": "9.966145483151626",
-        "lng": "76.24374389648439"
-      },
-      "id": 98443199
-    },
-    {
       "cityName": "Yelahanka",
       "country": "India",
       "emoji": "🇮🇳",
@@ -59,6 +47,18 @@
         "lng": "76.66259765625"
       },
       "id": 98443201
+    },
+    {
+      "cityName": "Udupi",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-12-27T06:31:00.564Z",
+      "notes": "Beautiful Place😍",
+      "position": {
+        "lat": "13.336175186494927",
+        "lng": "74.74822998046876"
+      },
+      "id": 98443202
     }
   ]
 }

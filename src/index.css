@@ -4,8 +4,8 @@
 
 /* These CSS variables are global, so they are available in all CSS modules */
 :root {
-  --color-brand--1: #ffb545;
-  --color-brand--2: #00c46a;
+  --color-brand--1: #0ee4a4;
+  --color-brand--2: #0ca747;
 
   --color-dark--0: #242a2e;
   --color-dark--1: #2d3439;
