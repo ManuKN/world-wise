@@ -1,4 +1,4 @@
-import {createContext, useContext, useEffect, useReducer } from "react";
+import {createContext, useCallback, useContext, useEffect, useReducer } from "react";
 import PropTypes from 'prop-types';
 
 const BASE_URL = 'http://localhost:9000'
@@ -77,7 +77,7 @@ useEffect(function(){
 },[])
 
  
-    async function getCity(id){
+    const getCity = useCallback(async function getCity(id){
       if(Number(id)===currentCity.id) return;
         try{
           dispatch({type:"loading"})
@@ -88,8 +88,7 @@ useEffect(function(){
         catch{
           dispatch({type:'Rejected' , payload:'There was a Problem with fetching City Data...☹️'})
         }
-
-    }
+    },[currentCity.id])
 
     async function createCity(newCity){
       try{

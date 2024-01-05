@@ -42,7 +42,7 @@ const  BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client'
       const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`)
       const data = await res.json()
       console.log(data)
-      setCityName(data.city || data.locality || "")
+      setCityName(data.city || data.locality || "") 
       setCountry(data.countryName)
       setEmoji(convertToEmoji(data.countryCode))
       if(!data.countryCode) throw new Error("That Does't seems like a City... Please Click somewhere Else😉")
