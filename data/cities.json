@@ -25,18 +25,6 @@
       "id": 17806751
     },
     {
-      "cityName": "Yelahanka",
-      "country": "India",
-      "emoji": "🇮🇳",
-      "date": "2023-12-26T19:15:04.163Z",
-      "notes": "Namooru😚",
-      "position": {
-        "lat": "13.114589451238322",
-        "lng": "77.52742767333986"
-      },
-      "id": 98443200
-    },
-    {
       "cityName": "Mysore",
       "country": "India",
       "emoji": "🇮🇳",
@@ -59,6 +47,18 @@
         "lng": "74.74822998046876"
       },
       "id": 98443202
+    },
+    {
+      "cityName": "Colombo",
+      "country": "Sri Lanka",
+      "emoji": "🇱🇰",
+      "date": "2023-12-31T17:00:39.858Z",
+      "notes": "nice  place",
+      "position": {
+        "lat": "6.931879889517218",
+        "lng": "79.85824584960939"
+      },
+      "id": 98443203
     }
   ]
 }
